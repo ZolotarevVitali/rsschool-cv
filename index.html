@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>Document</title>
   <script defer src="/js/script.js"></script>
 </head>
@@ -17,15 +18,58 @@
       <img id="menu-btn-img" class="toogle-menu__img" src="/images/burger.svg" alt="button">
     </a>
     <nav id="header-menu" class="menu">
-      <a class="menu__item" href="/html/">HTML</a>
-      <a class="menu__item" href="/css/">CSS</a>
-      <a class="menu__item" href="/js/">JavaScript</a>
-      <a class="menu__item" href="/python/">Python</a>
+      <a class="menu__item" data-link="about" href="#">About</a>
+      <a class="menu__item" data-link="education" href="#">Education</a>
+      <a class="menu__item" data-link="experience" href="#">Experience</a>
+      <a class="menu__item" data-link="skills" href="#">Skills</a>
+      <a class="menu__item" data-link="hobbies" href="#">Hobbies</a>
+      <a class="menu__item" data-link="links" href="#">Links</a>
+      <a class="menu__item" data-link="contacts" href="#">Contacts</a>
     </nav>
     <a class="logo" href="/">
       <img class="logo__img" src="/images/html5.webp" alt="logo">
     </a>
   </header>
+  <main class="main">
+    <section class="performance">
+      <div class="avatar">
+         <img src="/images/react.png" alt="avatar" class="avatar__img" />
+      </div>
+      <div>
+        <h1 class="title">Vitali Zolotarev</h1>
+        <p>Frontend Developer</p>
+      </div>
+    </section>
+    <section id="about" class="section">
+      <h2 class="section__title">About</h2>
+      <div class="section__content">
+        Hello! I'm Vitali, the frontend developer. I have a background in information technology, with a focus on frontend development and UI design.
+        I am the type of person who seizes every opportunity to learn somethisng new.
+        That is why I enjoy challenges. From there, I'm under pressure to learn quickly and gain a lot of new experiance.
+      </div>
+    </section>
+    <section id="education" class="section">
+      <h2 class="section__title">Education</h2>
+    </section>
+    <section id="experience" class="section">
+      <h2 class="section__title">Experience</h2>
+    </section>
+    <section id="skills" class="section">
+      <h2 class="section__title">Skills</h2>
+    </section>
+    <section id="hobbies" class="section">
+      <h2 class="section__title">Hobbies & Interest</h2>
+    </section>
+    <section id="links" class="section">
+      <h2 class="section__title">Links and Credentials</h2>
+    </section>
+    <section id="contacts" class="section">
+      <h2 class="section__title">Contacts</h2>
+    </section>
+  </main>
+  <footer class="footer">
+    &copy; Vitali Zolotarev
+  </footer>
 </body>
 
 </html>
