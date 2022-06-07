@@ -44,8 +44,13 @@ function addMenuHandler(links) {
 }
 
 function handleButtonClick(id) {
-  
-  document.getElementById(id).scrollIntoView({block: "center", behavior: "smooth"});
+  [...document.getElementsByClassName('section--active')].forEach(item => {
+    item.classList.remove('section--active');
+  });
+  const section = document.getElementById(id);
+  section?.classList.add('section--active');
+  section?.scrollIntoView({block: "center", behavior: "smooth"});
 }
+
 
 addMenuHandler([...menuItems]);

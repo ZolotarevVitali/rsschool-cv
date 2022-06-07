@@ -112,6 +112,14 @@ body {
   padding: 10px 20px;
   color: #fff;
 }
+.footer__link {
+  color: #fff;
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+.footer__link:active, .footer__link:focus, .footer__link:hover {
+  transform: scale(1.2);
+  text-shadow: 2px 2px 5px #e44d26;
+}
 
 .section {
   padding: 30px 20px;
@@ -125,13 +133,77 @@ body {
   }
 }
 .section:hover .section__content {
-  transform: rotateX(360deg);
+  transform: rotateY(360deg);
 }
 .section__title {
   margin-bottom: 20px;
+  padding-bottom: 10px;
+  position: relative;
+  text-align: center;
+  position: relative;
+}
+.section__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 100%;
+  background-color: #233a5f;
+  border-radius: 5px;
+  max-width: 50%;
+  transition: max-width 1s;
+}
+@media (min-width: 768px) {
+  .section__title::after {
+    max-width: 25%;
+  }
+}
+.section--active .section__title::after, .section:hover .section__title::after {
+  max-width: 100%;
 }
 .section__content {
-  transition: transform 0.3s;
+  transition: transform 0.5s;
+  margin-top: 15px;
+  position: relative;
+}
+.section__content--flex {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .section__content--flex {
+    flex-direction: row;
+  }
+}
+.section__content--center {
+  justify-content: center;
+}
+.section__left {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .section__left {
+    margin: 0 20px 0 0;
+    width: 30%;
+    min-width: 30%;
+  }
+}
+.section__img {
+  width: 100%;
+}
+.section__start {
+  width: 20px;
+}
+.section__link {
+  color: #233a5f;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.section__link:hover {
+  color: #084bb1;
 }
 
 .performance {
@@ -174,6 +246,53 @@ body {
 .title {
   text-shadow: 2px 2px 5px #233a5f;
   font-size: 32px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.skills__img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+  width: 50px;
+  min-width: auto;
+  margin: 0 20px 0 0;
+}
+.skills__stars {
+  display: flex;
+  align-items: center;
+}
+
+.code pre {
+  width: 100%;
+  overflow: auto;
+}
+
+.hobbies {
+  background-image: url("/images/hobbie.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.hobbies::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(35, 58, 95, 0.5);
+}
+
+.list {
+  padding-left: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
