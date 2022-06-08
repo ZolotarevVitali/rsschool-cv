@@ -300,7 +300,7 @@ body {
 .hobbies {
   position: relative;
   color: #fff;
-  background-image: url("/images/hobbie.webp");
+  background-image: url("../images/hobbie.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
