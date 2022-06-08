@@ -1,12 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <title>Document</title>
+  <script defer src="script.js"></script>
 </head>
+
 <body>
-  <h1>Hello World!</h1>
+  <header class="header">
+    <a id="menu-btn" class="toogle-menu" href="#">
+      <img id="menu-btn-img" class="toogle-menu__img" src="/images/burger.svg" alt="button">
+    </a>
+    <nav id="header-menu" class="menu">
+      <ul class="menu__list">
+        <li><a class="menu__item" data-link="about" href="#">About</a></li>
+        <li><a class="menu__item" data-link="education" href="#">Education</a></li>
+        <li><a class="menu__item" data-link="experience" href="#">Experience</a></li>
+        <li><a class="menu__item" data-link="skills" href="#">Skills</a></li>
+        <li><a class="menu__item" data-link="code" href="#">Code</a></li>
+        <li><a class="menu__item" data-link="projects" href="#">Projects</a></li>
+        <li><a class="menu__item" data-link="hobbies" href="#">Hobbies</a></li>
+        <li><a class="menu__item" data-link="contacts" href="#">Contacts</a></li>
+      </ul>
+    </nav>
+    <a class="logo" href="/">
+      <img class="logo__img" src="/images/html5.webp" alt="logo">
+    </a>
+  </header>
+  <main class="main">
+    <section class="performance">
+      <div class="avatar">
+        <img src="/images/react.png" alt="avatar" class="avatar__img" />
+      </div>
+      <div>
+        <h1 class="title">Vitali Zolotarev</h1>
+        <p>Frontend Developer</p>
+      </div>
+    </section>
+    <section id="about" class="section">
+      <h2 class="section__title">About</h2>
+      <div class="section__content">
+        Hello! I'm Vitali, the frontend developer. I have a background in information technology, with a focus on
+        frontend development and UI design.
+        I am the type of person who seizes every opportunity to learn somethisng new.
+        That is why I enjoy challenges. From there, I'm under pressure to learn quickly and gain a lot of new
+        experiance.
+        My English level is A2.
+      </div>
+    </section>
+    <section id="education" class="section">
+      <h2 class="section__title">Education</h2>
+      <div class="section__content section__content--flex">
+        <div class="section__left">
+          2015 - 2020
+        </div>
+        <div class="section__right">
+          Belarusian National Technical University, faculty of Information Technologies and Robotics, specialty engineer
+          programmer.
+        </div>
+      </div>
+      <div class="section__content section__content--flex">
+        <div class="section__left">
+          2020 - 2021
+        </div>
+        <div class="section__right">
+          Online course frontend development.
+        </div>
+      </div>
+    </section>
+    <section id="experience" class="section">
+      <h2 class="section__title">Experience</h2>
+      <div class="section__content section__content--flex">
+        <div class="section__left">
+          <p>Web Studio Sun, web developer.</p>
+          <p>2017 - 2019</p>
+        </div>
+        <div class="section__right">
+          Development of web applications based on popular CMS.
+          Creation of online stores, websites for companies for doing business.
+        </div>
+      </div>
+      <div class="section__content section__content--flex">
+        <div class="section__left">
+          <p>Web Studio Fly, web developer.</p>
+          <p>2019 - 2020</p>
+        </div>
+        <div class="section__right">
+          Development of web applications based on popular CMS.
+          Creation of online stores, websites for companies for doing business.
+        </div>
+      </div>
+      <div class="section__content section__content--flex">
+        <div class="section__left">
+          <p>Web Studio Creative, web developer.</p>
+          <p>2020 - 2022</p>
+        </div>
+        <div class="section__right">
+          Frontend developer. Сlient-side application development.
+          Creation of online stores, websites for companies for doing business.
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="section">
+      <h2 class="section__title">Skills</h2>
+      <ul>
+        <li class="section__content section__content--flex skills">
+          <div class="section__left skills__img-wrap">
+            <img class="section__img" src="/images/html.png" alt="html">
+          </div>
+          <div class="section__right skills__stars">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+          </div>
+        </li>
+        <li class="section__content section__content--flex skills">
+          <div class="section__left skills__img-wrap">
+            <img class="section__img" src="/images/css.png" alt="html">
+          </div>
+          <div class="section__right skills__stars">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+          </div>
+        </li>
+        <li class="section__content section__content--flex skills">
+          <div class="section__left skills__img-wrap">
+            <img class="section__img" src="/images/js.png" alt="html">
+          </div>
+          <div class="section__right skills__stars">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+          </div>
+        </li>
+        <li class="section__content section__content--flex skills">
+          <div class="section__left skills__img-wrap">
+            <img class="section__img" src="/images/sass.png" alt="html">
+          </div>
+          <div class="section__right skills__stars">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star-gray.png" alt="start">
+          </div>
+        </li>
+        <li class="section__content section__content--flex skills">
+          <div class="section__left skills__img-wrap">
+            <img class="section__img" src="/images/react-logo.png" alt="html">
+          </div>
+          <div class="section__right skills__stars">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star-gray.png" alt="start">
+            <img class="section__start" src="/images/star-gray.png" alt="start">
+          </div>
+        </li>
+        <li class="section__content section__content--flex skills">
+          <div class="section__left skills__img-wrap">
+            <img class="section__img" src="/images/node.png" alt="html">
+          </div>
+          <div class="section__right skills__stars">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star.jpeg" alt="start">
+            <img class="section__start" src="/images/star-gray.png" alt="start">
+            <img class="section__start" src="/images/star-gray.png" alt="start">
+            <img class="section__start" src="/images/star-gray.png" alt="start">
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="code" class="section">
+      <h2 class="section__title">Code</h2>
+      <pre class="code">
+        <code>
+        function addMenuHandler(links) {
+
+          if(!links.length) {
+            return false;
+          }
+        
+          links.forEach((link) => {
+            link.addEventListener('click', (e) => {
+        
+              e.preventDefault();
+              const elementId = e.target?.dataset?.link;
+              if(!elementId) {
+                return;
+              }
+              handleButtonClick(elementId);
+            })
+          });
+        }
+        </code>
+      </pre>
+    </section>
+    <section id="projects" class="section">
+      <h2 class="section__title">Projects</h2>
+      <ul class="list">
+        <li><a class="section__link" target="_blank" href="https://github.com/ZolotarevVitali/rsschool-cv/">My CV</a>
+        </li>
+      </ul>
+    </section>
+    <section id="hobbies" class="section hobbies">
+      <h2 class="section__title">Hobbies & Interest</h2>
+      <div class="section__content section__content--flex section__content--center">
+        <ul class="hobbies__list list">
+          <li class="hobbies__item">Board Gaming</li>
+          <li class="hobbies__item">Bowling</li>
+          <li class="hobbies__item">Brewing Beer</li>
+          <li class="hobbies__item">Camping</li>
+          <li class="hobbies__item">Fishing</li>
+        </ul>
+      </div>
+
+    </section>
+    <section id="contacts" class="section">
+      <h2 class="section__title">Contacts</h2>
+      <ul>
+        <li class="section__content section__content--flex">
+          <div class="section__left">
+            Address
+          </div>
+          <div class="section__right">
+            Repablic of Belarus, Minsk.
+          </div>
+        </li>
+        <li class="section__content section__content--flex">
+          <div class="section__left">
+            Phone
+          </div>
+          <div class="section__right">
+            <a target="_blank" class="section__link" href="tel:+375297777777">+375 (29) 777-77-77</a>
+          </div>
+        </li>
+        <li class="section__content section__content--flex">
+          <div class="section__left">
+            Email
+          </div>
+          <div class="section__right">
+            <a target="_blank" class="section__link" href="mailto:mrxzolot@gmail.com">mrxzolot@gmail.com</a>
+          </div>
+        </li>
+        <li class="section__content section__content--flex">
+          <div class="section__left">
+            Telegram
+          </div>
+          <div class="section__right">
+            <a target="_blank" class="section__link" href="https://t.me/zolotarev_vitali">@zolotarev_vitali</a>
+          </div>
+        </li>
+        <li class="section__content section__content--flex">
+          <div class="section__left">
+            GitHub
+          </div>
+          <div class="section__right">
+            <a target="_blank" class="section__link" href="https://github.com/ZolotarevVitali">ZolotarevVitali</a>
+          </div>
+        </li>
+      </ul>
+
+    </section>
+  </main>
+  <footer class="footer">
+    <a target="_blank" class="footer__link" href="https://github.com/ZolotarevVitali">&copy; 2022 Vitali Zolotarev</a>
+    <a target="_blank" class="footer__link" href="https://rs.school/js/">
+      <img class="footer__img" src="/images/rs.svg" alt="rsschool"/>
+    </a>
+  </footer>
 </body>
+
 </html>

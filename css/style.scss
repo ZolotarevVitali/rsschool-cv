@@ -1,0 +1,347 @@
+$header-height: 50px;
+$color-main: #233a5f;
+$bar-menu-width: 180px;
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    height: $header-height;
+    background-color: $color-main;
+    box-shadow: 0 5px 20px $color-main;
+    z-index: 2;
+}
+
+.toogle-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30px;
+    transition: color 0.3s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    @media (min-width: 960px) {
+        display: none;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.logo {
+    height: 100%;
+
+    &__img {
+        height: 100%;
+    }
+}
+
+.menu {
+    max-width: 0;
+    overflow: hidden;
+    font-size: 16px;
+    background-color: $color-main;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: max-width 0.3s;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    line-height: 2;
+    border-radius: 0 0 16px 0;
+    box-shadow: 5px 5px 20px $color-main;
+    border-top: 1px solid #fff;
+
+    &--open {
+        max-width: $bar-menu-width;
+    }
+
+    @media (min-width: 960px) {
+        position: static;  
+        max-width: unset;
+        padding: 0;
+        border: 0;
+        background: transparent;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 960px) {
+            flex-direction: row;
+        }    
+    }
+
+    &__item {
+        color: #fff;
+        padding: 5px 15px;
+        transition: transform 0.3s, text-shadow 0.3s;
+
+        &:active,
+        &:focus,
+        &:hover {
+            transform: scale(1.2);
+            text-shadow: 2px 2px 5px #e44d26;
+        }
+    }
+}
+
+.main {
+    min-height: calc(100vh - 50px);
+    padding: $header-height 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: $color-main;
+}
+
+.footer {
+    background-color: $color-main;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: #fff;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    &__link {
+        color: #fff;
+        transition: transform 0.3s, text-shadow 0.3s;
+
+        &:active,
+        &:focus,
+        &:hover {
+            transform: scale(1.2);
+            text-shadow: 2px 2px 5px #e44d26;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+
+            @media (min-width: 768px) {
+                margin: 0;
+            }
+        }
+    }
+
+    &__img {
+        height: 30px;
+    }
+}
+
+.section {
+    padding: 30px 20px;
+    box-shadow: 3px 3px 10px $color-main;
+    margin-bottom: 15px;
+    border-radius: 16px;
+
+    @media (min-width: 768px) {
+        padding: 40px 30px;
+    }
+
+    &:hover &__content {
+        transform: rotateY(360deg);
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        position: relative;
+        text-align: center;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 3px;
+            width: 100%;
+            background-color: $color-main;
+            border-radius: 5px;
+            max-width: 50%;
+            transition: max-width 1s;
+
+            @media (min-width: 768px) {
+                max-width: 25%;
+            }
+
+            .section--active &,
+            .section:hover & {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__content {
+        transition: transform 0.5s;
+        margin-top: 15px;
+        position: relative;
+        &--flex {
+            display: flex;
+            flex-direction: column;
+
+            @media (min-width: 768px) {
+                flex-direction: row;
+            }
+        }
+
+        &--center {
+            justify-content: center;
+        }
+    }
+
+    &__left {
+        margin-bottom: 15px;
+        font-weight: 600;
+        @media (min-width: 768px) {
+            margin: 0 20px 0 0;
+            width: 30%;
+            min-width: 30%;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__start {
+        width: 20px;
+    }
+
+    &__link {
+        color: $color-main;
+        font-weight: 500;
+        transition: color .3s;
+
+        &:hover {
+            color: #084bb1;
+        }
+    }
+}
+
+.performance {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+        margin: 0 30px 0 0;
+    }
+
+    &__img {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.title {
+    text-shadow: 2px 2px 5px $color-main;
+    font-size: 32px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &__img-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+        width: 50px;
+        min-width: auto;
+        margin: 0 20px 0 0;
+    }
+
+    &__stars {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.code {
+    width: 100%;
+    overflow: auto;
+}
+
+.hobbies {
+    background-image: url('/images/hobbie.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba($color-main, .5);
+    }
+}
+
+.list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
