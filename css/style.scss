@@ -9,6 +9,10 @@ $bar-menu-width: 180px;
     box-sizing: border-box;
 }
 
+ul {
+    list-style-type: none;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
 }
@@ -61,10 +65,8 @@ body {
 .menu {
     max-width: 0;
     overflow: hidden;
-    display: flex;
     font-size: 16px;
     background-color: $color-main;
-    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
@@ -82,13 +84,20 @@ body {
     }
 
     @media (min-width: 960px) {
-        display: flex;
-        position: static;
-        flex-direction: row;
+        position: static;  
         max-width: unset;
         padding: 0;
         border: 0;
         background: transparent;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 960px) {
+            flex-direction: row;
+        }    
     }
 
     &__item {
@@ -115,12 +124,17 @@ body {
 
 .footer {
     background-color: $color-main;
-    height: 50px;
+    min-height: 50px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 10px 20px;
     color: #fff;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
 
     &__link {
         color: #fff;
@@ -132,6 +146,18 @@ body {
             transform: scale(1.2);
             text-shadow: 2px 2px 5px #e44d26;
         }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+
+            @media (min-width: 768px) {
+                margin: 0;
+            }
+        }
+    }
+
+    &__img {
+        height: 30px;
     }
 }
 
@@ -290,10 +316,8 @@ body {
 }
 
 .code {
-    pre {
-        width: 100%;
-        overflow: auto;
-    }
+    width: 100%;
+    overflow: auto;
 }
 
 .hobbies {
@@ -318,5 +342,6 @@ body {
 }
 
 .list {
+    list-style-type: disc;
     padding-left: 20px;
 }
